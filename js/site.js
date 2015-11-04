@@ -83,6 +83,7 @@ function clickGo() {
         table.append('tr').attr('class', 'row_header').call(row('version', 'Version'));
         table.append('tr').call(row('timestamp', 'Time', timeFormat));
         table.append('tr').call(row('changeset', 'Changeset', changesetLink));
+        table.append('tr').call(row('changeset', 'Changeset comment', changesetComment));
         table.append('tr').call(row('user', 'User', userLink));
         table.append('tr')
             .attr('class', 'row_header')
@@ -107,7 +108,11 @@ function clickGo() {
         function changesetLink(d) {
             return '<a target="_blank" href="http://openstreetmap.org/browse/changeset/' + d + '">' + d + '</a>';
         }
-
+        
+        function changesetComment(d) {
+            return 'CSC '+ d;
+        }
+        
         overlays.clearLayers();
 
         if (type == 'node') {
