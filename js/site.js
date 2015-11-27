@@ -83,7 +83,7 @@ function clickGo() {
         table.append('tr').attr('class', 'row_header').call(row('version', 'Version'));
         table.append('tr').call(row('timestamp', 'Time', timeFormat));
         table.append('tr').call(row('changeset', 'Changeset', changesetLink));
-        table.append('tr').call(row('changeset', 'Changeset comment', changesetComment));
+        table.append('tr').call(row('changesetcomment', 'Changeset comment', changesetComment));
         table.append('tr').call(row('user', 'User', userLink));
         table.append('tr')
             .attr('class', 'row_header')
